@@ -1,0 +1,124 @@
+/* ************* Reset ************* */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ********** body color change ********* */
+body{   
+    background-color: rgb(70, 70, 70);
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading{
+    margin: 20px 0px;
+    font-size: 1.6rem;
+    color: rgb(206, 198, 207);
+}
+
+.container{
+ background-color: rgb(41, 38, 38);
+ height: 600px;
+ width: 500px;
+ position: relative;
+ overflow: hidden;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    height: 400px;
+    top: -100px;
+    left: -320px;
+    width: 500px;
+    background-image: linear-gradient(transparent,rgb(167, 21, 11));
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    height: 400px;
+    top: -90px;
+    left: -300px;
+    width: 500px;
+    background-image: linear-gradient(transparent,rgb(4, 139, 56));
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -3s;
+
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.form{
+    position: absolute;
+    background-color: rgb(41, 38, 38);
+    inset: 5px ;
+    outline: 2px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form input{
+    padding: 12px;
+    width: 90%;
+    letter-spacing: 2px;
+    margin: 20px 0px;
+    height: 40px;
+    font-size: 1.2rem;
+    
+}
+
+.form a{
+ margin:8px 0px;
+ font-size: 1.2rem;
+ color: white;
+ letter-spacing: 2px;
+}
+
+.form a:hover{
+    color:rgb(102, 106, 107) ;
+}
+
+.form input:focus{
+    font-size: 1.2rem;
+    background:linear-gradient(transparent, rgb(81, 88, 84)) ;
+    color: rgb(250, 246, 246);
+}
+
+
+.form button{
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 12px;
+    width: 30%;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.form button:hover{
+    color: white;
+    background: linear-gradient(transparent, rgb(102, 106, 107));
+    outline: transparent;
+    /* border: transparent; */
+}
